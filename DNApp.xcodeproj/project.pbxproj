@@ -40,6 +40,7 @@
 		9475C5FD1B3EFD9C00C4C379 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9475C5FC1B3EFD9C00C4C379 /* Images.xcassets */; };
 		9475C6001B3EFD9C00C4C379 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9475C5FE1B3EFD9C00C4C379 /* LaunchScreen.xib */; };
 		9475C60C1B3EFD9D00C4C379 /* DNAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9475C60B1B3EFD9D00C4C379 /* DNAppTests.swift */; };
+		949960B81B7BBDAC00C855F1 /* LearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949960B71B7BBDAC00C855F1 /* LearnViewController.swift */; };
 		94E7B5C21B41C0C0007B7136 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E7B5C11B41C0C0007B7136 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +93,7 @@
 		9475C6051B3EFD9C00C4C379 /* DNAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DNAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9475C60A1B3EFD9D00C4C379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9475C60B1B3EFD9D00C4C379 /* DNAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNAppTests.swift; sourceTree = "<group>"; };
+		949960B71B7BBDAC00C855F1 /* LearnViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearnViewController.swift; sourceTree = "<group>"; };
 		94E7B5C11B41C0C0007B7136 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -177,6 +179,7 @@
 				9475C5F41B3EFD9C00C4C379 /* DNApp.xcdatamodeld */,
 				9475C5F01B3EFD9C00C4C379 /* Supporting Files */,
 				94E7B5C11B41C0C0007B7136 /* LoginViewController.swift */,
+				949960B71B7BBDAC00C855F1 /* LearnViewController.swift */,
 			);
 			path = DNApp;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				94656CB31B400DE800A60C18 /* DesignableLabel.swift in Sources */,
 				94656CBB1B400DE800A60C18 /* LoadingView.swift in Sources */,
 				94656CB71B400DE800A60C18 /* DesignableView.swift in Sources */,
+				949960B81B7BBDAC00C855F1 /* LearnViewController.swift in Sources */,
 				94656CB51B400DE800A60C18 /* DesignableTextField.swift in Sources */,
 				94656CC41B400DE800A60C18 /* SpringTextView.swift in Sources */,
 				94656CC61B400DE800A60C18 /* TransitionManager.swift in Sources */,

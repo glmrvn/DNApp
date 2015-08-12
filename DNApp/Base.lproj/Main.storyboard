@@ -404,10 +404,10 @@
             </objects>
             <point key="canvasLocation" x="-188" y="1073"/>
         </scene>
-        <!--View Controller-->
+        <!--Learn View Controller-->
         <scene sceneID="Kgz-KZ-to6">
             <objects>
-                <viewController id="f8a-I7-jQx" sceneMemberID="viewController">
+                <viewController id="f8a-I7-jQx" customClass="LearnViewController" customModule="DNApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Lcx-dC-ggr"/>
                         <viewControllerLayoutGuide type="bottom" id="wV3-Bn-hkL"/>
@@ -427,13 +427,13 @@
                                 <blurEffect style="extraLight"/>
                             </visualEffectView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2FF-mk-NKp">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <animations/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="u7e-ke-Xpe" kind="unwind" unwindAction="unwindToViewController:" id="jQc-qd-wOg"/>
+                                    <action selector="closeButtonDidTouch:" destination="f8a-I7-jQx" eventType="touchUpInside" id="67g-vh-6sL"/>
                                 </connections>
                             </button>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LwI-pN-3jB" customClass="DesignableView" customModule="DNApp" customModuleProvider="target">
@@ -473,6 +473,9 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="learnButtonDidTouch:" destination="f8a-I7-jQx" eventType="touchUpInside" id="5qE-yh-gPz"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbI-ZD-cnW">
                                         <rect key="frame" x="0.0" y="211" width="280" height="70"/>
@@ -507,8 +510,8 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="animation" value="zoomIn"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
@@ -523,9 +526,12 @@
                             <constraint firstAttribute="centerX" secondItem="LwI-pN-3jB" secondAttribute="centerX" id="mhp-xe-Ni4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bookImageView" destination="jz4-EE-fle" id="YD5-Cp-Heb"/>
+                        <outlet property="dialogView" destination="LwI-pN-3jB" id="AVx-Cr-NmS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Rn-SO-HeA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="u7e-ke-Xpe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-188" y="1796"/>
         </scene>
@@ -545,7 +551,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
-                            <button opaque="NO" alpha="0.49999999999999961" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEM-YC-IZA" customClass="DesignableButton" customModule="DNApp" customModuleProvider="target">
+                            <button opaque="NO" alpha="0.49999999999999961" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEM-YC-IZA" customClass="DesignableButton" customModule="DNApp" customModuleProvider="target">
                                 <rect key="frame" x="80" y="504" width="44" height="44"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -593,6 +599,7 @@
                             <constraint firstItem="ptu-Hw-LiV" firstAttribute="width" secondItem="dEM-YC-IZA" secondAttribute="width" id="YvR-cJ-70o"/>
                             <constraint firstItem="ptu-Hw-LiV" firstAttribute="centerY" secondItem="dEM-YC-IZA" secondAttribute="centerY" id="bav-mm-kfB"/>
                             <constraint firstItem="5pI-VH-iAJ" firstAttribute="top" secondItem="U8b-Su-fys" secondAttribute="bottom" id="cWb-64-Q2D"/>
+                            <constraint firstItem="dEM-YC-IZA" firstAttribute="leading" secondItem="ptu-Hw-LiV" secondAttribute="trailing" constant="16" id="rkQ-Av-nGL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="U8b-Su-fys" secondAttribute="trailing" id="u8V-Fv-NHE"/>
                         </constraints>
                     </view>
